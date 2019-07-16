@@ -1,11 +1,11 @@
 FROM golang:1.12.7-alpine
 
-WORKDIR /go/src/basic-go-server
+WORKDIR /go/src/yuruben
 COPY . .
 
-RUN go-wrapper download
-RUN go-wrapper install
+RUN go get -d -v github.com/bokuwakuma/yuruben
+RUN go install -v github.com/bokuwakuma/yuruben
 
 EXPOSE 8080
 
-CMD ["go-wrapper", "run"]
+CMD [ "yuruben" ]
