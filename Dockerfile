@@ -1,4 +1,4 @@
-FROM golang:1.8-alpine
+FROM golang:1.12.7-alpine
 
 WORKDIR /go/src/basic-go-server
 COPY . .
